@@ -109,7 +109,7 @@ var SampleApp = function() {
 
         //  Add handlers for the app (from the routes).
         for (var r in self.routes) {
-            self.app.get(r, self.routes[r]);
+            self.app.use(r, self.routes[r]);
         }
     };
 
