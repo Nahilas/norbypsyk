@@ -119,7 +119,7 @@ var SampleApp = function() {
     function sendMail(req, res, next) {
         // get account info from OpenShift environment variable
         var servicePlanId = "sendgrid_05eac"; // your OpenShift Service Plan ID
-        var accountInfo = JSON.parse(process.env.servicePlanId);
+        var accountInfo = JSON.parse(process.env[servicePlanId]);
 
         // using SendGrid's Node.js Library - https://github.com/sendgrid/sendgrid-nodejs
         var sendgrid = require("sendgrid")(accountInfo.username, accountInfo.password);
