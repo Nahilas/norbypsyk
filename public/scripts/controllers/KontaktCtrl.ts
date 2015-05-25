@@ -6,11 +6,29 @@ module norbypsyk {
 	export class KontaktCtrl {
 
 		public static $inject = [
-			'$scope'
+			'$scope',
+			'$http'
 		];
 
 
-		constructor(private $scope: IKontaktScope) {
+		constructor(private $scope: IKontaktScope, private $http: angular.IHttpService) {
+
+			$scope.mailSendt = false;
+
+			$scope.sendMail = () => {
+				alert($scope.email);
+
+				if(!$scope.email || !$scope.besked) { return; }
+
+				$http.post('mail/send', { email: $scope.email, besked: $scope.besked })
+					.success((data, status, headers, config) => {
+						$scope.mailSendt = true;
+					});
+
+			}
+
+
+
 
 		}
 

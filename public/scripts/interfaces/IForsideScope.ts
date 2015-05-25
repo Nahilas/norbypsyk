@@ -7,7 +7,10 @@ module norbypsyk
 	{
 		kompetencer:Kompetence[],
 		navn: string,
-		title: string
+		title: string,
+		selectedKompetence: Kompetence,
+
+		kompetenceClicked(kompetence:Kompetence):void
 	}
 
 }

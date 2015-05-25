@@ -22,21 +22,34 @@
 		<p>&nbsp;</p>
 
 		<div class="row">
-			<div class="medium-6 column">
+			<div class="medium-6 column" style="position: relative;">
+
+
 				<p>Har du spørgsmål eller er der noget du gerne vil have uddybet? Brug formularen nedenfor, så vender jeg tilbage til dig så snart jeg kan.</p>
-				<form id="kontaktForm">
+				<form id="kontaktForm" style="{{ mailSendt ? 'opacity: 0.2' : '' }}">
 					<label>Din e-mail adresse:
 
-						<input type="text">
+						<input type="email" ng-model="email" required />
 					</label>
 
 					<label>Hvad vil du gerne vide?
 
-						<textarea style="height: 300px;"></textarea>
+						<textarea style="height: 300px;" ng-model="besked" required></textarea>
 					</label>
 
-					<input type="submit" value="Send" style="background-color: #7d5c84" class="button right">
+					<input type="submit" value="Send" ng-click="sendMail()" style="background-color: #7d5c84" class="button right">
 				</form>
+
+
+
+				<div style="{{ mailSendt ? 'display: block; position: absolute; top: 0; left: 0; right: 0; bottom: 0;' : 'display: none;' }}">
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+
+					<h3 class="text-center">Tak for din henvendelse!</h3>
+
+				</div>
 
 			</div>
 

@@ -6,7 +6,8 @@ module norbypsyk
 			public navn: string,
 			public beskrivelse: string,
 			public ikon: string,
-			public animateNow: boolean
+			public animateNow: boolean,
+			public langBeskrivelse: string,
 		)
 		{ }
 	}

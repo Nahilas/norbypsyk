@@ -18,6 +18,13 @@ h6 {
   color: #4d4d4d;
   font-family: 'Open Sans';
 }
+a,
+a:visited,
+a:focus,
+a:active {
+  color: #7d5c84;
+  text-decoration: underline;
+}
 nav.menu {
   width: 100%;
   border-bottom: solid 1px #ddd;
@@ -121,6 +128,9 @@ nav.menu ul li.selected {
   margin-left: 4px;
   margin-top: 0px;
   color: #fff;
+}
+.forside .kompetencer.ng-enter {
+  animation: fadeIn 1s;
 }
 .forside .forside-fields .forside-fields-field img.forside-fields-field-icon {
   width: 30%;

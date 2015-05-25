@@ -5,7 +5,7 @@
 		<div class="row">
 
 			<div class="column small-12 medium-8 medium-offset-2 forside-hero-content">
-				<p>&nbsp;</p>
+				<p style="margin-bottom: 0.5em;">&nbsp;</p>
 
 				<div class="forside-hero-content-image"></div>
 
@@ -18,6 +18,8 @@
 
 			</div>
 
+
+
 		</div>
 	</div>
 
@@ -26,16 +28,29 @@
 
 	<div class="container">
 		<div class="row forside-fields">
-			<div class="small-6 large-3 columns" ng-repeat="kompetence in kompetencer">
+
+			<div class="small-6 large-3 columns kompetencer" ng-repeat="kompetence in kompetencer" ng-if="selectedKompetence === null">
 				<div style="max-width: 250px; margin: auto;" class="forside-fields-field text-center animate-opacity {{ kompetence.animateNow ? 'animate-opacity-enter' : '' }}">
 					<img class="forside-fields-field-icon" src="images/{{ kompetence.ikon }}.svg" />
 					<h4 style="margin-bottom: 20px;" class="forside-fields-field-name">{{ kompetence.navn }}</h4>
 					<p>{{ kompetence.beskrivelse }}</p>
 
-					<a href="#">Læs mere...</a>
+					<a href ng-click="kompetenceClicked(kompetence)">Læs mere...</a>
 				</div>
 
 				<p>&nbsp;</p>
+			</div>
+
+			<div class="small-12 medium-8 medium-offset-2 columns text-center kompetencer" ng-if="selectedKompetence !== null">
+				<p class="text-left">
+					<a href ng-click="kompetenceClicked(null)">Tilbage</a>
+				</p>
+
+				<img class="forside-fields-field-icon" src="images/{{ selectedKompetence.ikon }}.svg" style="width: 150px;"/>
+				<h3 style="margin-bottom: 20px;" class="forside-fields-field-name">{{ selectedKompetence.navn }}</h3>
+				<p style="font-weight: 300;" class="text-left">{{ selectedKompetence.langBeskrivelse }}</p>
+
+
 			</div>
 
 		</div>

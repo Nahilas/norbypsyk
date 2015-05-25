@@ -2,7 +2,7 @@
 //  OpenShift sample Node application
 var express = require('express');
 var fs      = require('fs');
-
+var sendgrid = require('sendgrid');
 
 /**
  *  Define the sample application.
@@ -106,12 +106,34 @@ var SampleApp = function() {
     self.initializeServer = function() {
         self.createRoutes();
         self.app = express.createServer();
+        self.app.use(require('body-parser').json());
 
         //  Add handlers for the app (from the routes).
         for (var r in self.routes) {
             self.app.use(r, self.routes[r]);
         }
+
+        self.app.post('/mail/send', sendMail);
     };
+
+    function sendMail(req, res, next) {
+        // get account info from OpenShift environment variable
+        var servicePlanId = "sendgrid_05eac"; // your OpenShift Service Plan ID
+        var accountInfo = JSON.parse(process.env.servicePlanId);
+
+        // using SendGrid's Node.js Library - https://github.com/sendgrid/sendgrid-nodejs
+        var sendgrid = require("sendgrid")(accountInfo.username, accountInfo.password);
+        var email = new sendgrid.Email();
+
+        email.addTo("nahilas@gmail.com");
+        email.setFrom(req.body.email);
+        email.setSubject("Mail fra " + req.body.email);
+        email.setHtml(req.body.besked);
+
+        sendgrid.send(email);
+
+        res.send(200);
+    }
 
 
     /**
