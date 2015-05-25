@@ -1,0 +1,66 @@
+<section class="forside">
+
+	<div class="forside-hero container">
+
+		<div class="row">
+
+			<div class="column small-12 medium-8 medium-offset-2 forside-hero-content">
+				<p>&nbsp;</p>
+
+				<div class="forside-hero-content-image"></div>
+
+				<div class="forside-hero-content-text">
+					<h1>Cæcilie Norby</h1>
+					<h4>Autoriseret Psykolog</h4>
+
+				</div>
+
+
+			</div>
+
+		</div>
+	</div>
+
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+
+	<div class="container">
+		<div class="row forside-fields">
+			<div class="small-6 large-3 columns" ng-repeat="kompetence in kompetencer">
+				<div style="max-width: 250px; margin: auto;" class="forside-fields-field text-center animate-opacity {{ kompetence.animateNow ? 'animate-opacity-enter' : '' }}">
+					<img class="forside-fields-field-icon" src="images/{{ kompetence.ikon }}.svg" />
+					<h4 style="margin-bottom: 20px;" class="forside-fields-field-name">{{ kompetence.navn }}</h4>
+					<p>{{ kompetence.beskrivelse }}</p>
+
+					<a href="#">Læs mere...</a>
+				</div>
+
+				<p>&nbsp;</p>
+			</div>
+
+		</div>
+	</div>
+
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+
+
+	<div class="container" style="width: 100%; background: #f3f3f3; padding-top: 20px; height: 173px;">
+		<div class="row">
+
+			<div class="small-12 columns text-center">
+
+				<hr style="border: solid 1px #C2BCBC;"/>
+
+				<h3 style="position: relative;display: inline-block;background: #f3f3f3;top: -42px;padding-left: 20px;padding-right: 20px;">Er du i tvivl eller har spørgsmål?</h3>
+				<p>&nbsp;</p>
+				<a href="#/kontakt" class="button large secondary" style="top: -67px; background-color: #7d5c84; color: #fff;">Kontakt mig</a>
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+</section>

@@ -1,0 +1,136 @@
+body {
+  background: #fff;
+  font-family: Verdana;
+  margin: 0px;
+  background-image: url(../images/pattern.png);
+  background-repeat: repeat-x;
+  background-position: 0 50px;
+  font-family: 'Open Sans', sans-serif;
+  color: #4d4d4d;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  color: #4d4d4d;
+  font-family: 'Open Sans';
+}
+nav.menu {
+  width: 100%;
+  border-bottom: solid 1px #ddd;
+  height: 50px;
+}
+nav.menu ul {
+  float: right;
+  padding: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+nav.menu ul li {
+  font-size: 18px;
+  font-weight: 300;
+  list-style-type: none;
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+nav.menu ul li:hover {
+  text-decoration: underline;
+}
+nav.menu ul li.selected {
+  font-weight: bold;
+}
+.animate-opacity {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.animate-opacity.animate-opacity-enter {
+  opacity: 1;
+  transform: scale(1);
+}
+.at-view-fade-in.ng-enter {
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+}
+.at-view-fade-in.ng-enter-active {
+  opacity: 1;
+}
+.at-view-fade-out.ng-leave {
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  position: absolute;
+  width: 100%;
+  opacity: 1;
+}
+.at-view-fade-out.ng-leave-active {
+  opacity: 0;
+}
+.forside .forside-hero {
+  width: 100%;
+  padding-bottom: 40px;
+  background: #7d5c84;
+  background-image: url('../images/pattern.png');
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 25px;
+}
+.forside .forside-hero .forside-hero-content {
+  height: 100%;
+}
+.forside .forside-hero .forside-hero-content .forside-hero-content-image {
+  float: left;
+  height: 150px;
+  width: 150px;
+  border-radius: 75px;
+  background-position: 50% 50%;
+  background-size: auto 100%;
+  background-image: url('../images/caecilie.jpg');
+}
+.forside .forside-hero .forside-hero-content .forside-hero-content-text {
+  float: left;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+.forside .forside-hero .forside-hero-content .forside-hero-content-text h1 {
+  font-size: 50px;
+  font-weight: normal;
+  margin-bottom: 0px;
+  color: #fff;
+}
+.forside .forside-hero .forside-hero-content .forside-hero-content-text h4 {
+  margin-left: 4px;
+  margin-top: 0px;
+  color: #fff;
+}
+.forside .forside-fields .forside-fields-field img.forside-fields-field-icon {
+  width: 30%;
+  margin: auto;
+  margin-bottom: 5px;
+}
+.forside .forside-fields .forside-fields-field .forside-fields-field-name {
+  color: #7d5c84;
+}
+.forside .forside-fields .forside-fields-field p {
+  font-size: 15px;
+  font-weight: 300;
+}
