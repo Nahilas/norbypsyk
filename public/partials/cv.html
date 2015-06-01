@@ -1,0 +1,61 @@
+<p>&nbsp;</p>
+
+<section class="cv">
+	
+	<div class="row">
+		<div class="small-12 column">
+			
+			<h2 class="text-center">Curriculum Vitae</h2>
+			
+			<p>&nbsp;</p>
+			
+			<p>Her skriver jeg lidt om mit arbejde som psykolog og de områder jeg arbejder med. 
+			Jeg er uddannet cand.psych fra Aalborg Universitet i 2010 og blev autoriseret ved psykolognævnet i 2013. I mit arbejde har jeg fået erfaring med samtaleforløb med børn, unge og voksne, samt med undersøgelser af både børn og voksne, ved bl.a. forældrekompetenceundersøgelser.</p>
+			
+			<p>Jeg har yderligere erfaring med supervision af andre faggrupper, samt af forældre og plejeforældre. Gennem mit arbejde har jeg yderligere opbygget en bred erfaring omkring samarbejde med forskellige faggrupper og med det system der omgiver børn og voksne.</p>
+			
+			<p>I mit arbejde har jeg arbejdet en del med udsatte grupper og har derfor særlig erfaring med den sårbare situation forældre og børn i disse grupper er i.</p>
+			
+			<p>Jeg har primært interesseret mig for børne- og ungeområdet og har gennem årene søgt at dygtiggøre mig indenfor dette område. Jeg er psykodynamisk orienteret, hvilket betyder at jeg arbejder relationsorienteret i min terapi. Terapien tager udgangspunkt i den nuværende problematik og trækker tråde til historik og handlemønstre.</p>
+			
+			<p>Jeg kan altid <a href="#/kontakt">kontaktes</a> så vi sammen kan finde ud af om jeg er den rette psykolog for dig.</p>
+			
+			
+		</div>
+		
+	</div>
+	<p>&nbsp;</p>
+	
+	<div class="row">
+		
+		<div class="small-12 medium-8 medium-offset-2 column">
+			
+			<div ng-repeat="kategori in kategorier">
+			
+				<strong>{{ kategori.navn }}</strong>
+				<ul style="margin: 0; padding: 0; padding-left: 5px;">
+					<li style="list-style-type: none; margin-top: 5px; margin-bottom: 5px;" ng-repeat="element in kategori.elementer">
+						<em>{{ element.aarstal }}:</em>
+						
+						<span>&nbsp;{{ element.navn }}</span>
+						
+						
+						<small ng-if="element.teacher !== null">{{ element.teacher }}</small>
+						
+					</li>
+				</ul>	
+				
+				<p>&nbsp;</p>
+			</div>
+			
+				
+			
+		</div>
+		
+		
+	</div>
+
+	
+	
+</section>
+

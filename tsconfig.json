@@ -1,0 +1,31 @@
+{
+    "version": "1.5.0-alpha",
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "noLib": false
+    },
+    "filesGlob": [
+        "./**/*.ts",
+        "!./node_modules/**/*.ts"
+    ],
+    "files": [
+        "./index.ts",
+        "./public/scripts/_references.d.ts",
+        "./public/scripts/controllers/ForsideCtrl.ts",
+        "./public/scripts/controllers/KontaktCtrl.ts",
+        "./public/scripts/controllers/MenuCtrl.ts",
+        "./public/scripts/index.ts",
+        "./public/scripts/interfaces/IForsideScope.ts",
+        "./public/scripts/interfaces/IKontaktScope.ts",
+        "./public/scripts/interfaces/IMenuScope.ts",
+        "./public/scripts/models/Kompetence.ts",
+        "./public/scripts/models/MenuItem.ts",
+        "./public/scripts/typings/angularjs/angular-route.d.ts",
+        "./public/scripts/typings/angularjs/angular.d.ts",
+        "./public/scripts/typings/jquery/jquery.d.ts"
+    ]
+}
