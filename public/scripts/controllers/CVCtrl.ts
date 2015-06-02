@@ -16,6 +16,7 @@ module norbypsyk {
 					navn: 'CV',
 					elementer: [
 						{ navn: "Egen praksis", aarstal: "2015 - i dag", teacher: null },
+						{ navn: "Ansat i privat praksis", aarstal: "2013-2015", teacher: null },
 						{ navn: "Ansat ved Pædagogisk Psykologisk Rådgivning", aarstal: "2011-2013", teacher: null }		
 					]
 				},
@@ -23,7 +24,7 @@ module norbypsyk {
 				{
 					navn: 'Kurser',
 					elementer: [
-						{ navn: "Kursus iValg af interventionsformer", aarstal: "2015", teacher: "Ved psykolog Jørgen Nielsen" },
+						{ navn: "Kursus i Valg af interventionsformer", aarstal: "2015", teacher: "Ved psykolog Jørgen Nielsen" },
 						{ navn: "Kursus i Lovgivning og Etik", aarstal: "2015", teacher: "Ved psykolog Svend Hjerrild og Bente Adolphsen" },
 						{ navn: "Kursus i Anvendelse af Exners Rorschach System I", aarstal: "2014", teacher: "Ved psykolog Kim Gabriel Hansen" },
 						{ navn: "Kursus i Metoder og begreber i psykodynamisk børne- og ungdomspsykoterapi", aarstal: "2013", teacher: "Ved psykolog Gudrun Bodin" },

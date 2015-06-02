@@ -10,7 +10,7 @@ module norbypsyk {
 	controllers.controller('priserCtrl', PriserCtrl);
 	controllers.controller('cvCtrl', CVCtrl);
 
-	var norbypsyk = angular.module('norbypsyk', ['ngAnimate', 'ngRoute', 'norbypsykControllers']);
+	var norbypsyk = angular.module('norbypsyk', ['ngAnimate', 'ngRoute', 'ngSanitize', 'norbypsykControllers']);
 
 
 	norbypsyk.config(['$routeProvider', ($routeProvider:angular.route.IRouteProvider) => {

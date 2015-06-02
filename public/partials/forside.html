@@ -40,10 +40,10 @@
 			
 
 			<div class="small-6 large-3 columns kompetencer {{ selectedKompetence.navn == kompetence.navn ? 'selected' : selectedKompetence !== null ? 'not-selected' : '' }}" ng-repeat="kompetence in kompetencer">
-				<div style="max-width: 250px; margin: auto;" class="forside-fields-field text-center animate-opacity {{ kompetence.animateNow ? 'animate-opacity-enter' : '' }}">
+				<div style="max-width: 250px; cursor: pointer; margin: auto;" ng-click="kompetenceClicked(kompetence)" class="forside-fields-field text-center animate-opacity {{ kompetence.animateNow ? 'animate-opacity-enter' : '' }}">
 					<img class="forside-fields-field-icon" style="max-width: 150px;" src="images/{{ kompetence.ikon }}.svg" />
 					<h4 style="margin-bottom: 20px;" class="forside-fields-field-name">{{ kompetence.navn }}</h4>
-					<p>{{ kompetence.beskrivelse }}</p>
+					<p ng-bind-html="kompetence.beskrivelse"></p>
 					
 					<a ng-click="kompetenceClicked(kompetence)">Læs mere...</a>
 				</div>
@@ -55,8 +55,8 @@
 				<div class="forside-fields-field text-center" style="max-width: 600px; margin: auto;">
 					<img class="forside-fields-field-icon" style="max-width: 150px;" src="images/{{ selectedKompetence.ikon }}.svg" />
 					<h4 style="margin-bottom: 20px;" class="forside-fields-field-name">{{ selectedKompetence.navn }}</h4>
-					<p>{{ selectedKompetence.beskrivelse }}
-						<span>{{ selectedKompetence.langBeskrivelse }}</span>
+					<p>
+						<span ng-bind-html="selectedKompetence.langBeskrivelse"></span>
 						
 					</p>
 					
