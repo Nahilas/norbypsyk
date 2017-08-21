@@ -14,7 +14,7 @@ module norbypsyk {
 			$scope.ydelser = [
 				{ 
 					navn: 'Individuel terapi med børn, unge eller voksne',
-					pris: '950,- kr per session' 
+					pris: '1000,- kr per session' 
 				},
 				{ 
 					navn: 'Supervision med forældre/plejeforældre',
